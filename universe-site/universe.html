@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вселенная — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html" class="active">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Описание мира</h2>
+        <form id="universe-form">
+          <label for="world-name">Название мира</label>
+          <input id="world-name" type="text" placeholder="Например, Аркадия" required>
+          <label for="world-desc">Описание</label>
+          <textarea id="world-desc" rows="8" placeholder="Как устроен мир..." required></textarea>
+          <label for="world-rules">Правила мира</label>
+          <textarea id="world-rules" rows="6" placeholder="Что можно, что нельзя..." required></textarea>
+          <button class="btn" type="submit">Сохранить вселенную</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Локации</h2>
+        <form id="location-form">
+          <input id="location-name" type="text" placeholder="Название локации" required>
+          <input id="location-desc" type="text" placeholder="Краткое описание" required>
+          <input id="location-img" type="url" placeholder="URL картинки (необязательно)">
+          <button class="btn" type="submit">Добавить локацию</button>
+        </form>
+        <div id="locations-list" class="gallery"></div>
+      </section>
+
+      <section>
+        <h2>Текущая вселенная</h2>
+        <article id="universe-view" class="card"></article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Вход</h2>
+        <form id="login-form">
+          <label for="login-name">Имя</label>
+          <input id="login-name" type="text" placeholder="Ваше имя" required>
+          <label for="login-pass">Пароль</label>
+          <input id="login-pass" type="password" placeholder="Пароль" required>
+          <button class="btn" type="submit">Войти</button>
+        </form>
+        <p class="muted">Нет аккаунта? <a href="#register">Зарегистрироваться</a></p>
+      </section>
+
+      <section id="register">
+        <h2>Регистрация</h2>
+        <form id="register-form">
+          <label for="reg-name">Имя</label>
+          <input id="reg-name" type="text" placeholder="Придумайте имя" required>
+          <label for="reg-pass">Пароль</label>
+          <input id="reg-pass" type="password" placeholder="Минимум 4 символа" minlength="4" required>
+          <label for="reg-avatar">Аватарка (необязательно)</label>
+          <input id="reg-avatar" type="file" accept="image/*">
+          <div id="avatar-preview-wrap" style="display:none">
+            <img id="avatar-preview" alt="Превью" class="avatar-large">
+          </div>
+          <button class="btn" type="submit">Создать аккаунт</button>
+        </form>
+        <p id="auth-status" class="muted"></p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

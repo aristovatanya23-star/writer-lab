@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Планировщик — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html" class="active">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Добавить главу</h2>
+        <form id="chapter-form">
+          <input id="chapter-title" type="text" placeholder="Название главы" required>
+          <input id="chapter-summary" type="text" placeholder="Краткий план" required>
+          <button class="btn" type="submit">Добавить</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Структура сюжета</h2>
+        <table class="planner-table">
+          <thead><tr><th>#</th><th>Глава</th><th>План</th><th>Статус</th></tr></thead>
+          <tbody id="chapters-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

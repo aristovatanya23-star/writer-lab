@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Поиск — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html" class="active">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section>
+        <h2>🔎 Поиск по сайту</h2>
+        <p class="muted">Ищет по историям, персонажам, локациям и главам.</p>
+        <input id="site-search" type="search" placeholder="Что ищем? Например: дракон, Иван, Аркадия...">
+        <p id="site-search-count" class="muted"></p>
+      </section>
+
+      <section>
+        <h2>📖 Истории</h2>
+        <article id="site-stories" class="card-list"></article>
+      </section>
+
+      <section>
+        <h2>🧑‍🎤 Персонажи</h2>
+        <article id="site-characters" class="card-list"></article>
+      </section>
+
+      <section>
+        <h2>🌍 Локации</h2>
+        <article id="site-locations" class="card-list"></article>
+      </section>
+
+      <section>
+        <h2>🗂️ Главы плана</h2>
+        <table class="planner-table">
+          <thead><tr><th>#</th><th>Глава</th><th>План</th></tr></thead>
+          <tbody id="site-chapters"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+ <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

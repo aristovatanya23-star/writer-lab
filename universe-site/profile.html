@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профиль — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html" class="active">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section id="profile-view"></section>
+
+      <section id="profile-edit-section" style="display:none">
+        <h2>✏️ Редактировать профиль</h2>
+        <form id="profile-edit-form">
+          <label for="pe-name">Новый ник</label>
+          <input id="pe-name" type="text" placeholder="Новое имя (если хочешь сменить)">
+          <label for="pe-bio">О себе</label>
+          <textarea id="pe-bio" rows="4" placeholder="Расскажи о себе..."></textarea>
+          <label for="pe-link">Ссылка (Telegram / сайт)</label>
+          <input id="pe-link" type="text" placeholder="https://t.me/...">
+          <label for="pe-avatar">Новая аватарка</label>
+          <input id="pe-avatar" type="file" accept="image/*">
+          <div id="pe-avatar-preview-wrap" style="display:none">
+            <img id="pe-avatar-preview" alt="Превью" class="avatar-large">
+          </div>
+          <button class="btn" type="submit">💾 Сохранить изменения</button>
+          <button class="btn btn-ghost" type="button" onclick="cancelProfileEdit()">Отмена</button>
+        </form>
+        <p id="profile-edit-status" class="muted"></p>
+      </section>
+
+      <section id="profile-stories-section" style="display:none">
+        <h2>📚 Истории автора</h2>
+        <article id="profile-stories" class="card-list"></article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>История — Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <article id="story-view" class="story-full"></article>
+
+      <section>
+        <h2>📥 Скачать историю</h2>
+        <p class="muted">Выбери формат — файл сохранится на твой компьютер.</p>
+        <div id="download-buttons" class="toolbar"></div>
+      </section>
+
+      <section id="comments-section">
+        <h2>💬 Комментарии</h2>
+        <form id="comment-form">
+          <label for="comment-text">Оставить комментарий</label>
+          <textarea id="comment-text" rows="3" placeholder="Поделись впечатлением..." required></textarea>
+          <p id="comment-status" class="muted"></p>
+          <button class="btn" type="submit">Отправить на модерацию</button>
+        </form>
+        <div id="comments-pending-wrap" style="display:none">
+          <h3>⏳ На модерации (видит только автор)</h3>
+          <div id="comments-pending" class="card-list"></div>
+        </div>
+        <h3>✅ Опубликованные</h3>
+        <div id="comments-list" class="card-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

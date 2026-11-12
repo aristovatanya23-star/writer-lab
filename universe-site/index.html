@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лаборатория писателя: редактор, вселенная, персонажи и библиотека историй.">
+  <title>Лаборатория писателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="menu-toggle" id="menu-toggle" type="button" title="Меню">☰</button>
+    <h1>🧪 Лаборатория писателя</h1>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="profile.html">👤 Профиль</a>
+      <a href="editor.html">📝 Редактор</a>
+      <a href="search.html">🔎 Поиск</a>
+      <a href="library.html">📚 Библиотека</a>
+    </nav>
+    <a href="login.html" id="auth-link" class="header-auth">Вход</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Разделы</h3>
+      <nav>
+        <a href="favorites.html">❤️ Избранное</a>
+        <a href="messages.html">💬 Сообщения</a>
+        <a href="universe.html">🌍 Вселенная</a>
+        <a href="characters.html">🧑‍🎤 Персонажи</a>
+        <a href="planner.html">🗂️ Планировщик</a>
+        <a href="support.html">🛠️ Поддержка</a>
+      </nav>
+      <h3>Настройки</h3>
+      <button id="theme-toggle" class="theme-btn" type="button" title="Сменить тему">🌙 Тема</button>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <h2 id="welcome">Пиши. Строй мир. Управляй героями.</h2>
+        <p>Всё в одном месте: редактор, вселенная, персонажи, план глав и публичная библиотека.</p>
+        <a class="btn" href="editor.html">Перейти в редактор →</a>
+      </section>
+
+      <section>
+        <h2>📚 Свежие истории</h2>
+        <p class="muted">Последние опубликованные работы авторов.</p>
+        <div id="home-library" class="card-list"></div>
+        <p style="margin-top:1rem"><a href="library.html" class="btn btn-ghost">Открыть всю библиотеку →</a></p>
+      </section>
+
+      <section>
+        <h2>Что внутри</h2>
+        <ul class="features">
+          <li><a href="library.html">📚 Библиотека</a> — читай и ищи чужие истории.</li>
+          <li><a href="editor.html">📝 Редактор</a> — пиши, публикуй, скачивай.</li>
+          <li><a href="universe.html">🌍 Вселенная</a> — мир, правила, локации.</li>
+          <li><a href="characters.html">🧑‍🎤 Персонажи</a> — карточки с портретами.</li>
+          <li><a href="planner.html">🗂️ Планировщик</a> — структура сюжета.</li>
+          <li><a href="messages.html">💬 Сообщения</a> — переписка с читателями.</li>
+        </ul>
+      </section>
+
+      <aside class="tip">
+        <h3>Совет</h3>
+        <p>Всё сохраняется в браузере. Зарегистрируйся — чтобы подписывать истории и комментировать.</p>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Лаборатория писателя</p>
+    <p><a href="support.html">🛠️ Техподдержка</a> · <a href="messages.html">💬 Сообщения</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
